@@ -16,6 +16,10 @@
     color: #fff !important;
 }
 
+.flex-wrap {
+    display: flex;
+}
+
 /* Set width for 100% width sections */
 
 .wide-row {
@@ -108,9 +112,14 @@ a[id*="MoreLink"], a[id*="hypMore"] {
 }
 
 .make-buttons em a:hover, .make-buttons em a:focus, a[id*="MoreLink"]:hover, a[id*="MoreLink"]:focus, a[id*="hypMore"]:hover, a[id*="hypMore"]:focus {
-    background-color: #1B1E28;
-    border-color: #1B1E28;
+    background-color: #373737;
+    border-color: #373737;
     color: white;
+}
+
+.slide.make-buttons em a:hover {
+    background-color: #006197;
+    transition: 0.3s;
 }
 
 .btn-success {
@@ -540,6 +549,9 @@ div[id*="threadNav"] .list-group-item-image img,
     padding-left: calc(50% - 600px);
 }
 
+.slider .slick-dots li {
+    margin: 0;
+}
 
 .slider .slick-dots {
     width: 270px;
@@ -548,11 +560,12 @@ div[id*="threadNav"] .list-group-item-image img,
     text-align: left;
 }
 
-.slider .slick-dots li.slick-active button:before {
+.slider .slick-dots li button:before {
     color: white;
+    font-size: 10px;
 }
 
-.slider .slick-dots li button:before {
+.slider .slick-dots li.slick-active button:before {
     color: white;
 }
 
@@ -577,4 +590,68 @@ div[id*="threadNav"] .list-group-item-image img,
     font-size: 18px;
     line-height: 20px;
     margin-bottom: 20px;
+}
+
+/* Top Tile */
+
+
+.top-tile {
+    flex: 1;
+    padding: 30px;
+    background-color: #fff;
+    border-bottom: 5px solid;
+    border-bottom: 5px solid transparent;
+}
+
+.top-tile img {
+    height: 50px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.tile-wrap {
+    margin-top: -130px;
+    position: relative;
+    z-index: 50;
+}
+
+.tile-wrap > a {
+    display: flex;
+    flex: 1;
+    color: #1B1E28;
+    text-decoration: none;
+    margin: 20px 15px 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.06), 0 0 30px 0 rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.tile-wrap > a:first-child {
+    margin-left: 0;
+}
+
+.tile-wrap > a:last-child {
+    margin-right: 0;
+}
+
+.tile-wrap > a:hover, .tile-wrap > a:focus {
+    margin-top: 16px;
+    margin-bottom: 44px;
+}
+
+.top-tile p {
+    font-size: 16px;
+    line-height: 18px;
+    color: #8c8c8c;
+}
+
+.top-tile > a a {
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 19px;
+    color: #0174b3;
+}
+
+.top-tile > a a {
+    color: #444545;
 }
