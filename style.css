@@ -12,6 +12,10 @@
     padding: 0;
 }
 
+.white-text, .slide .HtmlContent h1 {
+    color: #fff !important;
+}
+
 /* Set width for 100% width sections */
 
 .wide-row {
@@ -33,21 +37,19 @@
 
 /* Set Font Family Default Size and Color */
 
-body,
+body {
+    font-family: 'Proxima Nova', sans-serif;
+    color: #1B1E28;
+    font-size: 14px;
+}
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6,
 h1 > div,
 #PageTitleH1 {
-    font-family: 'Proxima Nova', sans-serif;
-    color: #1B1E28;
+    font-family: 'Raleway';
 }
 
-.big-header h2 {
-    font-size: 35px;
-    font-weight: 700;
-    line-height: 48px;
-    text-transform: capitalize;
-}
 
 
 h2, .h2 {
@@ -94,12 +96,11 @@ button:focus {
 .make-buttons em a,
 a[id*="MoreLink"], a[id*="hypMore"] {
 	display: inline-block;
-	padding: 10px 24px;
-	border-radius: 30px;
-    background-color: transparent;
-    border: 1px solid #2DC0E2;
+	padding: 10px;
+	border-radius: 2px;
+    background-color: #0173B2;
 	font-weight: 600;
-    color: #1B1E28;
+    color: #FFF;
     font-style: normal;
     text-transform: uppercase;
 	text-decoration: none;
@@ -237,6 +238,28 @@ min-height: 0;
 
 #searchColumn {
     margin-right: 10px;
+}
+
+#searchColumn button[id$="SearchButton"] {
+    background-color: #e6e7e8;
+    border-color: #e6e7e8;
+    border-radius: 0;
+    padding: 4px 5px;
+}
+
+#searchColumn input {
+    border: 1px solid #e6e7e8;
+    border-radius: 0;
+}
+
+#searchColumn input::placeholder { 
+    font-family: Proxima;
+    text-transform: capitalize;
+}
+
+#searchColumn button[id$="SearchButton"] .glyphicon-search { 
+    line-height: 24px;
+    line-height: 24px;
 }
 
 #MPSearchBlock {
@@ -381,7 +404,6 @@ ul.dropdown-menu li a {
     font-size: 13px;
     font-weight: 600;
     color: #1B1E28;
-
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
@@ -501,4 +523,58 @@ div[id*="threadNav"] .list-group-item-image img,
     width: 90px;
     height: 90px;
     margin: 0 auto;
+}
+
+
+/* Slider */
+
+.slide {
+    background-size: cover;
+    background-position: center;
+} 
+
+.slide .HtmlContent {
+    padding-top: 60px;
+    padding-bottom: 170px;
+    max-width: 768px;
+    padding-left: calc(50% - 600px);
+}
+
+
+.slider .slick-dots {
+    width: 270px;
+    bottom: 140px;
+    padding-left: calc(50% - 600px);
+    text-align: left;
+}
+
+.slider .slick-dots li.slick-active button:before {
+    color: white;
+}
+
+.slider .slick-dots li button:before {
+    color: white;
+}
+
+.slider::after {
+    content: '';
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: -100px;
+    right: -100px;
+    bottom: -100px;
+    display: block;
+    height: 140px;
+}
+
+.slide .HtmlContent h1 {
+    font-size: 38px;
+    line-height: 45px;
+}
+
+.slide .HtmlContent p {
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 20px;
 }
