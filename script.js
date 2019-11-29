@@ -4,3 +4,7 @@ $(function(){
     $('#searchColumn').insertBefore('#MPAuxNav');
 
 });
+
+$('#searchColumn input.form-control').on('click', function(){
+    $(window).off('resize');
+  });
