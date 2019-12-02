@@ -621,8 +621,8 @@ div[id*="threadNav"] .list-group-item-image img,
     color: #1B1E28;
     text-decoration: none;
     margin: 20px 15px 40px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.06), 0 0 30px 0 rgba(0,0,0,0.1);
+    border-radius: 2px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1);
     overflow: hidden;
 }
 
@@ -645,13 +645,14 @@ div[id*="threadNav"] .list-group-item-image img,
     color: #8c8c8c;
 }
 
-.top-tile > a a {
+a > .top-tile a {
     text-decoration: none;
     font-size: 16px;
+    font-weight: 600;
     line-height: 19px;
     color: #0174b3;
 }
 
-.top-tile > a a {
+a:hover > .top-tile  a {
     color: #444545;
 }
