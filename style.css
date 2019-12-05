@@ -128,7 +128,7 @@ a[id*="MoreLink"], a[id*="hypMore"], .HLLandingControl.HLEventList div[id*="More
 .make-buttons em a:hover, .make-buttons em a:focus, a[id*="MoreLink"]:hover, a[id*="MoreLink"]:focus, a[id*="hypMore"]:hover, a[id*="hypMore"]:focus,  .HLLandingControl.HLEventList div[id*="More"] a:hover,  .HLLandingControl.HLEventList div[id*="More"] a:focus {
     background-color: #373737;
     border-color: #373737;
-    color: white;
+    color: #fff;
 }
 
 .slide.make-buttons em a {
@@ -152,7 +152,7 @@ a[id*="MoreLink"], a[id*="hypMore"], .HLLandingControl.HLEventList div[id*="More
 .btn-success:hover, .btn-success:focus {
     background-color: #373737;
     border-color: #373737;
-    color: white !important;
+    color: #fff !important;
 }
 
 .make-buttons.green-buttons em a {
@@ -303,7 +303,7 @@ a[id*="LoginLink"] {
     background-color:#444545;
     border-color: #444545;
     color: #fff;
-    border-radius: 20px;
+    border-radius: 2px;
     font-size: 15px;
     font-weight: 600;
     line-height: 20px;
@@ -325,9 +325,6 @@ a[id*="LoginLink"] {
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
 }
 
-#MPOuterHeader.stickyNav-wide {
-    max-width: unset;
-}
 
 #HEADER > .col-md-12 {
     padding: 0;
@@ -376,17 +373,18 @@ ul.nav li a {
     background-color: #0173B2;
     border-radius: 2px;
     box-shadow: 0 0 5px 0 rgba(0,0,0,0.08);
-    color: white;
+    color: #fff;
     padding: 4px 12px;
 }
 
 .button-highlight .caret {
-    border-top-color: white !important;
-    border-bottom-color: white !important;
+    border-top-color: #fff !important;
+    border-bottom-color: #fff !important;
 }
 
 ul.nav li a:hover, ul.nac li a:focus {
     background-color: #006197;
+    color: #fff;
 }
 
 
@@ -605,12 +603,12 @@ div[id*="threadNav"] .list-group-item-image img,
 }
 
 .slider .slick-dots li button:before {
-    color: white;
+    color: #fff;
     font-size: 10px;
 }
 
 .slider .slick-dots li.slick-active button:before {
-    color: white;
+    color: #fff;
 }
 
 .slider::after {
@@ -685,6 +683,10 @@ div[id*="threadNav"] .list-group-item-image img,
     margin-bottom: 60px;
 }
 
+.top-tile h3 {
+    text-transform: uppercase;
+}
+
 .top-tile p {
     font-size: 16px;
     line-height: 18px;
@@ -705,6 +707,7 @@ a:hover > .top-tile  a {
 
 .HLHomePage {
     background-color: #fbfbfb;
+    padding-bottom: 20px;
 }
 
 /* Become Member */
@@ -715,7 +718,7 @@ a:hover > .top-tile  a {
     background-repeat: no-repeat;
     background-position: center;
     margin: 60px 0 100px;
-    color: white;
+    color: #fff;
     padding: 45px 0 60px;
 }
 
@@ -1162,7 +1165,6 @@ a:hover > .top-tile  a {
 }
 
 #MPOuterFooter {
-    margin-top: 20px;
     background-color: #444545;
 }
 
@@ -1254,7 +1256,7 @@ a:hover > .top-tile  a {
     }
 
     .top-resources .slick-dots li button:before {
-        color: white;
+        color: #fff;
         font-size: 10px;
     }
 
@@ -1269,7 +1271,7 @@ a:hover > .top-tile  a {
     }
 
     .top-resources .slick-dots li.slick-active button:before {
-        color: white;
+        color: #fff;
      }
 
 }
@@ -1359,7 +1361,7 @@ a:hover > .top-tile  a {
         float: none;
         width: auto;
         margin-top: 0;
-        background-color: white;
+        background-color: #fff;
         /* Set this to the appropriate colour */
         border: 0;
         box-shadow: none;
