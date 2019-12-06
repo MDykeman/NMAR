@@ -217,26 +217,18 @@ function discussions() {
 
 function footerFormatting() {
   $('#FOOTER .top-row, #FOOTER .bottom-row').wrapAll('<div class="col-md-8" />');
-
+  $('#FOOTER .bottom-row').wrapAll('<div class="row" />');
   var footerWaterMarkSrc = $('.footer-logo img').attr('src');
-
   $('#FOOTER').css('background-image', 'url("' + footerWaterMarkSrc + '")');
-
 }
 
 function becomeMember() {
   $('.member-cta').wrapInner('<div class="row-wide row"/>');
-
   $('.member-cta h3, .member-cta h2, .member-cta p').wrapAll('<div class="col-md-7"/>');
-
   var memberImgSrc = $('.member-cta img').attr('src');
-
   $('.member-cta img').hide();
-
   $('.member-cta > .row-wide .HtmlContent').append('<div class="col-md-5"><div class="img-container"/></div>');
-
   $('.member-cta .img-container').css('background-image', 'url("' + memberImgSrc + '")');
-
 }
 
 function handleInnerPageTitle() {
