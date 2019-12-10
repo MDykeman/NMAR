@@ -191,6 +191,7 @@ a[id*="MoreLink"], a[id*="hypMore"], .HLLandingControl.HLEventList div[id*="More
 #MPheader > .row:first-child {
     float: right;
     padding-top: 12px;
+    padding-right: 0;
 }
 
 #MPheader > .row:first-child > .col-md-12 {
@@ -363,9 +364,13 @@ a[id*="LoginLink"] {
 #NAV ul.nav li a {
     position: relative;
     padding-top: 10px;
-    padding-bottom: 24px;
+    padding-bottom: 10px;
     padding-right: 20px;
     padding-left: 20px;
+}
+
+#NAV ul.nav li:last-child a {
+    padding-right: 0;
 }
 
 .button-highlight {
@@ -548,13 +553,44 @@ ul.dropdown-menu li a {
 .slide {
     background-size: cover;
     background-position: center;
+    position: relative;
 } 
+
+.slide::before {
+    content: '';
+    background-color: rgb(30, 30, 30);
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+}
 
 .slide .HtmlContent {
     padding-top: 60px;
     padding-bottom: 170px;
     max-width: 768px;
     padding-left: calc(50% - 600px);
+    position: relative;
+    z-index: 5;
+}
+
+@supports (background-blend-mode: multiply) {
+
+    .slide {
+        background-color: rgba(30, 30, 30, 0.4);
+        background-blend-mode: multiply;
+    } 
+    .slide::before {
+        content: none;
+    }
+
+    .slide .HtmlContent {
+        position: static;
+    }
+
 }
 
 .slider .slick-dots li {
@@ -669,6 +705,10 @@ a > .top-tile a {
 
 a:hover > .top-tile  a {
     color: #444545;
+}
+
+a:hover > .top-tile  h3 {
+    color: #0174b3;
 }
 
 .HLHomePage {
@@ -872,6 +912,10 @@ a:hover > .top-tile  a {
 
 .HLLandingControl .calendary-number, .HLLandingControl .calendar-month {
     background-color: transparent;
+}
+
+.HLLandingControl .calendar-month {
+    text-transform: uppercase;
 }
 
 .HLLandingControl.HLEventList .calendary-number {
@@ -1236,6 +1280,13 @@ a:hover > .top-tile  a {
 #FOOTER .bottom-row ul {
     list-style: none;
     padding-left: 0;
+}
+
+/* Profile Page */
+
+.profile-page .bg-grey {
+    background-color: #f9f9f9;
+    border-radius: 2px;
 }
 
 /* Responsive */

@@ -128,7 +128,7 @@ a[id*="MoreLink"], a[id*="hypMore"], .HLLandingControl.HLEventList div[id*="More
 .make-buttons em a:hover, .make-buttons em a:focus, a[id*="MoreLink"]:hover, a[id*="MoreLink"]:focus, a[id*="hypMore"]:hover, a[id*="hypMore"]:focus,  .HLLandingControl.HLEventList div[id*="More"] a:hover,  .HLLandingControl.HLEventList div[id*="More"] a:focus {
     background-color: #373737;
     border-color: #373737;
-    color: white;
+    color: #fff;
 }
 
 .slide.make-buttons em a {
@@ -152,7 +152,7 @@ a[id*="MoreLink"], a[id*="hypMore"], .HLLandingControl.HLEventList div[id*="More
 .btn-success:hover, .btn-success:focus {
     background-color: #373737;
     border-color: #373737;
-    color: white !important;
+    color: #fff !important;
 }
 
 .make-buttons.green-buttons em a {
@@ -325,9 +325,6 @@ a[id*="LoginLink"] {
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
 }
 
-#MPOuterHeader.stickyNav-wide {
-    max-width: unset;
-}
 
 #HEADER > .col-md-12 {
     padding: 0;
@@ -343,7 +340,7 @@ a[id*="LoginLink"] {
 
 #NAV {
     position: absolute;
-    right: calc(50% - 585px);
+    right: calc(50% - 600px);
     bottom: 0;
 }
 
@@ -359,34 +356,38 @@ a[id*="LoginLink"] {
 }
 
 #NAV ul.nav {
-    /* border-top: 1px solid #D5DBDB; */
     border-radius: 0;
     margin-top: 5px;
 }
 
-ul.nav li a {
+#NAV ul.nav li a {
     position: relative;
-    padding-top: 3px;
+    padding-top: 10px;
     padding-bottom: 24px;
     padding-right: 20px;
     padding-left: 20px;
+}
+
+#NAV ul.nav li:last-child a {
+    padding-right: 0;
 }
 
 .button-highlight {
     background-color: #0173B2;
     border-radius: 2px;
     box-shadow: 0 0 5px 0 rgba(0,0,0,0.08);
-    color: white;
+    color: #fff;
     padding: 4px 12px;
 }
 
 .button-highlight .caret {
-    border-top-color: white !important;
-    border-bottom-color: white !important;
+    border-top-color: #fff !important;
+    border-bottom-color: #fff !important;
 }
 
 ul.nav li a:hover, ul.nac li a:focus {
     background-color: #006197;
+    color: #fff;
 }
 
 
@@ -463,121 +464,88 @@ ul.dropdown-menu li a {
     background-color: transparent;
  }
 
-/* Circular Profile Picture Reset */
-.HLLandingControl a[id*="ProfileImage"],
-.HLLandingControl a[id*="imgProfPic"],
-.GroupMember a,
-div[id*="AuthorImage"] a[id*="ProfileImage"],
-#MessageListContainer .col-sm-2 .form-group a,
-.HL-contact-suggestions .row.title-row>.col-sm-2.col-md-2 a,
-.text-muted-h2 div[id*="pnlImage"]>a,
-div[id*="threadNav"] .list-group-item-image,
-.bioBubbleShell a[id*='BioBubbleImage_lnkDisplay'],
-.SearchResults .search-results .Pro,
-.member-directory .member-row .member-picture a[id*="PictureLink"],
-.ContentUserControl div[id*="DetailPanel"] .col-md-2 .form-group .col-md-12 div[id*="pnlProfileImage"] a[id*="ProfileImage_imgProfile_lnkDisplay"],
-.blogs-block .Picture .form-group div[id*="BloggerImage"] a[id*="ProfileImageLink"],
-.ContentUserControl .CommentUserProfile .form-group div[id*="ProfileImage"] a[id*="ProfileImageLink"],
-.HLLandingControl a[id*="EngagementList_ProfileLink"] {
-    position: relative;
-    overflow: hidden;
-    display: block;
-    height: 40px;
-    width: 40px;
-    overflow: hidden;
-    border-radius: 50%;
-    background: #e5e9eb;
-}
+ /* Circular Photo */
+ .Welcome .imgButton.btn,
+ a[id*="ProfileImage"]:not([id*="NameLink"]):not([id*="ManageDropDown"]),
+ a[id*="UserImageDisplay"],
+ a[id*="Contacts_PictureLink"],
+ a[id*="lnkDisplay"],
+ a[id*="Welcome_Details_ProfileLink"],
+ .list-group-item-image,
+ a[title="User Name Image"],
+ a[oldtitle="User Name Image"],
+ .member-dashboard-img a,
+ .dashboard-col-3 ul li .col-sm-2 a,
+ .HLEngagement .Picture a,
+ td.ProfilePic > a {
+     border-radius: 50%;
+     overflow: hidden;
+     position: relative;
+     background-color: #d8d9db;
+     display: inline-flex;
+     justify-content: center;
+     align-items: center;
+     width: 45px;
+     height: 45px;
+ }
+ .Welcome .imgButton.btn {
+     background-color: #fff;
+ }
+ .list-group-item-image {
+     width: 40px;
+     height: 40px;
+ }
+ .list-group-item-nochild .list-group-item-image {
+     width: 20px;
+     height: 20px;
+ }
+ .Welcome button.btn-default.btn.imgButton {
+     width: 30px;
+     height: 30px;
+     min-height: 30px;
+     border: none;
+     margin-left: 10px;
+ }
 
-/* Welcome Button Img */
+ .btn-group>.btn+.dropdown-toggle.welcome-toggle {
+     display: none;
+ }
 
-.imgButton, .imgButton img {
-    border-radius: 50%;
-}
-
-.btn-group>.btn+.dropdown-toggle.welcome-toggle {
-    display: none;
-}
-
-#ProfileContainer li .panel .panel-body .row .col-md-3 {
-    text-align: center;
-}
-
-#ProfileContainer a[id*='ProfileLink'] {
-    border-radius: 50%;
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-    height: 60px;
-    width: 60px;
-}
-
-#ProfileContainer a[id*='ProfileLink'] img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    max-height: none !important;
-    max-width: none !important;
-}
-
-.HLLandingControl a[id*='ProfileImage'] img,
-.HLEngagement ul li .title-row a[id*='ProfileLink'] img,
-.bioBubbleShell a[id*='BioBubbleImage'] img,
-.HLLandingControl a[id*="imgProfPic"] img,
-.GroupMember img,
-div[id*="AuthorImage"] a[id*="ProfileImage"] img,
-#MessageListContainer .col-sm-2 .form-group a img,
-.HL-contact-suggestions .row.title-row>.col-sm-2.col-md-2 a img,
-.text-muted-h2 div[id*="pnlImage"]>a>img,
-div[id*="threadNav"] .list-group-item-image img,
-.member-directory .member-row .member-picture a[id*="PictureLink"] img,
-.ContentUserControl .form-group .col-md-12 div[id*="pnlProfileImage"] div[id*="ProfileImage_imgProfile_lnkDisplay"] img,
-.blogs-block .Picture .form-group div[id*="BloggerImage"] a[id*="ProfileImageLink"] img,
-.ContentUserControl .CommentUserProfile .form-group div[id*="ProfileImage"] a[id*="ProfileImageLink"] img {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: auto;
-    width: 40px;
-    max-height: 200px;
-    border-radius: 0 !important;
-}
-
-/* Community Center Profile Picture */
-.community .ContentUserControl .Content .GroupMember a {
-    margin: 0 auto;
-}
-
-.bioBubbleShell .Name h4 a {
-    transition: .3s;
-}
-
-.bioBubbleShell .Name h4 a:hover {
-    transition: .3s;
-    text-decoration: none
-}
-
-/* Profile Page Image Reset */
-.ContentUserControl div[id*="ProfileImage"] a[id*="ImageControl_lnkDisplay"] {
-    width: 120px;
-    height: 120px;
-    margin: 0 auto;
-    transform: none;
-}
-
-.ContentUserControl div[id*="ProfileImage"] a[id*="ImageControl_lnkDisplay"] img {
-    width: 100%;
-    height: auto;
-}
-
-#MessageListContainer .col-sm-2 .form-group a {
-    width: 90px;
-    height: 90px;
-    margin: 0 auto;
-}
-
+ .text-muted-h2 a[id*="ImageControl_lnkDisplay"] {
+     width: 140px;
+     height: 140px;
+     background: #f9f9f9;
+ }
+ .HLEngagement .Picture a {
+     width: 50px;
+     height: 50px;
+ }
+ a[id*="Welcome_Details_ProfileLink"] {
+     width: 60px;
+     height: 60px;
+ }
+ 
+ .imgButton img,
+ a[id*="ProfileImage"] img,
+ a[id*="UserImageDisplay"] img,
+ a[id*="Contacts_PictureLink"] img,
+ a[id*="lnkDisplay"] img,
+ a[id*="Welcome_Details_ProfileLink"] img,
+ .list-group-item-image img,
+ a[title="User Name Image"] img,
+ a[oldtitle="User Name Image"] img,
+ .member-dashboard-img img,
+ .dashboard-col-3 ul li .col-sm-2 a img,
+ .HLEngagement .Picture a img,
+ td.ProfilePic > a > img {
+     position: relative;
+     max-height: 100% !important;
+     width: auto;
+ }
+ 
+ .member-directory .member-picture {
+     text-align: center;
+ }
 
 /* Slider */
 
@@ -605,12 +573,12 @@ div[id*="threadNav"] .list-group-item-image img,
 }
 
 .slider .slick-dots li button:before {
-    color: white;
+    color: #fff;
     font-size: 10px;
 }
 
 .slider .slick-dots li.slick-active button:before {
-    color: white;
+    color: #fff;
 }
 
 .slider::after {
@@ -685,6 +653,10 @@ div[id*="threadNav"] .list-group-item-image img,
     margin-bottom: 60px;
 }
 
+.top-tile h3 {
+    text-transform: uppercase;
+}
+
 .top-tile p {
     font-size: 16px;
     line-height: 18px;
@@ -705,6 +677,7 @@ a:hover > .top-tile  a {
 
 .HLHomePage {
     background-color: #fbfbfb;
+    padding-bottom: 20px;
 }
 
 /* Become Member */
@@ -715,7 +688,7 @@ a:hover > .top-tile  a {
     background-repeat: no-repeat;
     background-position: center;
     margin: 60px 0 100px;
-    color: white;
+    color: #fff;
     padding: 45px 0 60px;
 }
 
@@ -783,9 +756,9 @@ a:hover > .top-tile  a {
     display: block;
     border-style: solid;
     border-color: #045C8C transparent transparent transparent;
-    bottom: -16px;
+    bottom: -5px;
     left: 0;
-    border-width: 16px 0 0 16px;
+    border-width: 5px 0 0 15px;
 }
 
 .ContentUserControl .HLLandingControl {
@@ -794,6 +767,10 @@ a:hover > .top-tile  a {
     box-shadow: 0 0 1px 0 rgba(0,0,0,0.1);
     border: 0;
     margin: 20px 0 40px;
+}
+
+.interior .ContentUserControl .HLLandingControl {
+    padding-bottom: 20px;
 }
 
 .HLLandingControl ul li {
@@ -839,6 +816,11 @@ a:hover > .top-tile  a {
 .HLLandingControl h5 a:hover, .HLLandingControl h5 a:focus {
     text-decoration: none;
 }
+
+.HLEventList .Content div[id*="ContentPanel"] .col-md-12 > br {
+    display: none;
+}
+
 
 .HLLandingControl.HLEventList ul li p.break-word {
     margin-bottom: 0;
@@ -1017,6 +999,13 @@ a:hover > .top-tile  a {
 
 .top-resources a[id*="MoreLink"] {
     margin-top: 20px;
+    background-color: #0173B2;
+    border-color: #0173B2;
+}
+
+.top-resources a[id*="MoreLink"]:hover, .top-resources a[id*="MoreLink"]:focus {
+    background-color: #006197;
+    border-color: #006197;
 }
 
 .top-resources .slick-list {
@@ -1072,6 +1061,10 @@ a:hover > .top-tile  a {
     font-size: 14px;
     line-height: 16px;
     color: #0173b2;
+}
+
+.featured-photo h3 a {
+    text-transform: uppercase;
 }
 
 
@@ -1141,6 +1134,10 @@ a:hover > .top-tile  a {
     max-width: unset;
 }
 
+.interior #MainCopy_ContentWrapper {
+    padding-bottom: 60px;
+}
+
 #MPOuterMost.full .interior-header #BreadCrumb.BreadCrumb {
     background-color: #f2f2f2;
 }
@@ -1162,7 +1159,6 @@ a:hover > .top-tile  a {
 }
 
 #MPOuterFooter {
-    margin-top: 20px;
     background-color: #444545;
 }
 
@@ -1196,7 +1192,7 @@ a:hover > .top-tile  a {
 }
 
 
-#FOOTER > .row:first-child > .col-md-12, #FOOTER > .row:first-child > .col-md-12 > .col-md-8, #FOOTER > .row:first-child > .col-md-12 > .col-md-8 > .col-md-4 {
+#FOOTER > .row:first-child > .col-md-12, #FOOTER > .row:first-child > .col-md-12 > .col-md-8 {
     padding: 0;
 }
 
@@ -1216,11 +1212,16 @@ a:hover > .top-tile  a {
     padding-bottom: 7px;
 }
 
+#FOOTER .top-row {
+    border-bottom: 1px solid #575757;
+}
+
 #FOOTER .top-row h3 {
     font-family: 'Raleway';
     font-size: 18px;
     line-height: 15px;
     font-weight: 700;
+    text-transform: uppercase;
 }
 
 #FOOTER .top-row p {
@@ -1254,7 +1255,7 @@ a:hover > .top-tile  a {
     }
 
     .top-resources .slick-dots li button:before {
-        color: white;
+        color: #fff;
         font-size: 10px;
     }
 
@@ -1269,7 +1270,7 @@ a:hover > .top-tile  a {
     }
 
     .top-resources .slick-dots li.slick-active button:before {
-        color: white;
+        color: #fff;
      }
 
 }
@@ -1359,7 +1360,7 @@ a:hover > .top-tile  a {
         float: none;
         width: auto;
         margin-top: 0;
-        background-color: white;
+        background-color: #fff;
         /* Set this to the appropriate colour */
         border: 0;
         box-shadow: none;
